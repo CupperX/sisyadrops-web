@@ -92,7 +92,8 @@ const MainScreen = () => {
 
     const handleConnectButtonClick = (connectScreen) => {
         console.log(`Connecting`);
-        navigate('/connectScreen', { state: { connectScreen } });
+        /*navigate('/connectScreen', { state: { connectScreen } });*/
+        navigate("/techScreen", { state:4});
 
     };
 

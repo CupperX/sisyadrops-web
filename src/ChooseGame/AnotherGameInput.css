@@ -1,0 +1,91 @@
+.input-header {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.13px;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.input-subheader {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.75px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.save-button {
+  width: 369px;
+  height: 53px;
+  border-radius: 20px;
+  background: #4A9DDB;
+  border: none;
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 25.78px;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+  background-color: #3a7dab;
+}
+
+.another-game-input input {
+  width: 369px;
+  height: 53px;
+  border-radius: 20px;
+  background: #56A4FF1A;
+  border: none;
+  padding-left: 25px;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 25.78px;
+  color: #4A9DDB;
+  caret-color: white;
+  box-sizing: border-box;
+  margin-top: 12px;
+  outline: none;
+}
+
+.active input {
+  border: 4px solid #4A9DDB;
+}
+
+.another-game-input input::placeholder {
+  color: #4A9DDB;
+}
+
+.another-game-input input:focus::placeholder {
+  color: #4A9DDB63;
+}
+
+.another-game-input {
+  margin-top: 31px;
+}
+.wrong-name input{
+    border: 4px solid #DB4A4A;
+    background-color: #FF636333;
+    color: #DB4A4A;
+}
+.wrong-name input::placeholder{
+    color: #DB4A4A;
+}
+.error-message{
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color:#DB4A4A;
+  padding-left: 9px;
+  margin-top: 5px;
+}

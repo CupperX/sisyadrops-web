@@ -1,0 +1,20 @@
+.button-for-save {
+    width: 369px;
+    height: 68px;
+    border-radius: 20px;
+    border: none;
+    background: #0F98E5;
+    font-family: Rubik;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 40.29px;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    margin-top: 104px;
+}
+.error-margin{
+    margin-top: 82px;
+}
