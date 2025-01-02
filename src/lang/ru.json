@@ -15,5 +15,32 @@
   "empty_accounts_list_description": "Давай скорее начнём!",
 
   "connect_info_header": "Фарми твич с выключенным\nустройством и интернетом",
-  "connect_info_second": "Подключение займет меньше 10 секунд"
+  "connect_info_second": "Подключение займет меньше 10 секунд",
+
+  "technical-support-button":"Техподдержка",
+  "main-menu-button":"Главное меню",
+  "watch-progress-button":"Посмотреть прогресс",
+
+  "ready-header":"Готово",
+  "ready-second":"Аккаунт успешно подключен, фарм запущен",
+  "technical-work-header":"Идут техработы",
+  "develop-text-header":"Этот раздел в разработке",
+  "technical-work-and-develop-text-second":"Попробуйте позже",
+  "something-went-wrong-header":"Что-то пошло не так",
+  "something-went-wrong-second":"Но это не ваша вина. Обратитесь в техподдержку за помощью",
+
+  "game-1-button":"Stalcraft",
+  "game-2-button":"Rust",
+  "game-3-button":"Escape from Tarkov",
+  "game-4-button":"Warframe",
+
+  "choose-game-header":"Выбор игры",
+  "choose-game-second":"Стримеры будут выбраны автоматически",
+
+  "another-game-header":"Другие игры",
+  "another-game-second":"Укажите стримера по нужной игре",
+  "another-game-placeholder":"Никнейм или ссылка",
+  "another-game-streamer-does-not-exist-third":"Стримера с таким никнеймом не существует",
+
+  "save-button":"Сохранить"
 }

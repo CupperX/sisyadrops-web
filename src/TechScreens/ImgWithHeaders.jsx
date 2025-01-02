@@ -5,30 +5,32 @@ import CrossIcon from "../assets/cross-icon.svg";
 import KeyIcon from "../assets/key-icon.svg";
 
 import "./ImgWithHeaders.css";
+import { useTranslation } from 'react-i18next';
 
 
 const ImgWithHeaders = ({ variant }) => {
   // Данные для каждого варианта
+  const { t } = useTranslation();
   const variants = {
     1: {
       image: CheckMarkIcon,
-      h2: 'Готово',
-      h3: 'Аккаунт успешно подключен, фарм запущен',
+      h2: "ready-header",
+      h3: 'ready-second',
     },
     2: {
       image: KeyIcon,
-      h2: 'Идут техработы',
-      h3: 'Попробуйте позже',
+      h2: 'technical-work-header',
+      h3: 'technical-work-and-develop-text-second',
     },
     3: {
       image: KeyIcon,
-      h2: 'Этот раздел в разработке',
-      h3: 'Попробуйте позже',
+      h2: 'develop-text-header',
+      h3: 'technical-work-and-develop-text-second',
     },
     4: {
       image: CrossIcon,
-      h2: 'Что-то пошло не так',
-      h3: 'Но это не ваша вина. Обратитесь в техподдержку за помощью',
+      h2: 'something-went-wrong-header',
+      h3: 'something-went-wrong-second',
     },
   };
   const specialClasses={
@@ -44,8 +46,8 @@ const ImgWithHeaders = ({ variant }) => {
   return (
     <div className='image-with-headers'>
       <img src={currentVariant.image} alt={`Variant ${variant}`} />
-      <h2>{currentVariant.h2}</h2>
-      <h3 className={specialClasses[variant]}>{currentVariant.h3}</h3>
+      <h2>{t(currentVariant.h2)}</h2>
+      <h3 className={specialClasses[variant]}>{t(currentVariant.h3)}</h3>
     </div>
   );
 };

@@ -2,16 +2,19 @@ import React, { useState } from "react";
 import "./ListOfGames.css";
 import TextOnComponents from "./TextOnComponents"
 import AnotherGameInput from "./AnotherGameInput";
+import { useTranslation } from 'react-i18next';
+
 
 const ListOfGames = ({setInputValue,/* isStreamerNotExist,*/ setIsInputActive, isActive, errBool}) => {
+  const { t } = useTranslation();
   // Состояния для хранения активности
   const [activeButton, setActiveButton] = useState(null);
 
   const buttonTexts = [
-    'Stalcraft',
-    'Rust',
-    'Escape from Tarkov',
-    'Warframe',
+    'game-1-button',
+    'game-2-button',
+    'game-3-button',
+    'game-4-button',
   ];
 
   // Обработчик клика по кнопке
@@ -28,14 +31,14 @@ const ListOfGames = ({setInputValue,/* isStreamerNotExist,*/ setIsInputActive, i
 
   return (
     <div className="list-of-games">
-      <TextOnComponents nameOfHeader="Выбор игры" textForHeader="Стримеры будут выбраны автоматически"/>
-      {buttonTexts.map((text, id) => (
+      <TextOnComponents nameOfHeader={t("choose-game-header")} textForHeader={t("choose-game-second")}/>
+      {buttonTexts.map((ClassOfText, id) => (
         <button
           key={`button-${id}`}
           className={activeButton === id ? 'active' : ''}
           onClick={() => handleButtonClick(id)}
         >
-          {text}
+          {t(ClassOfText)}
         </button>
       ))}
       <AnotherGameInput 
