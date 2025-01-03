@@ -90,6 +90,10 @@ const MainScreen = () => {
         console.log(`Clicked on ${settingName}`);
     };
 
+    const handleAccauntButtonClick = (username, date) => {
+        navigate('/accaunt', { state: { username, date } });
+    };
+
     const handleConnectButtonClick = (connectScreen) => {
         console.log(`Connecting`);
         navigate('/connectScreen', { state: { connectScreen } });
@@ -99,7 +103,6 @@ const MainScreen = () => {
     //добавил для себя
     const handleButtonNextPage = (loginPage) => {
         navigate('/Login', { state: { loginPage } });
-
     };
 
     return (
@@ -194,7 +197,7 @@ const MainScreen = () => {
             {/* Блок с подключенными аккаунтами */}
             <div className="accounts-segment">
                 <h2 className="accounts-segment-title">Подключенные аккаунты</h2>
-                <button className="account-box">
+                <button className="account-box" onClick={() => handleAccauntButtonClick(t('empty_accounts_list'), account_date)}>
                     <div className="account-info">
                         <div className="account-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

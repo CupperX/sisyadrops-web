@@ -1,0 +1,97 @@
+body {
+    background: #0e0e0e;
+
+}
+
+.container-outsider {
+    padding: 0 !important;
+    margin: 0;
+}
+
+  .account-section {
+    height: 100vh;
+    position: relative;
+  }
+  
+  .account-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+    color: #fff;
+    margin-bottom: 22px;
+    padding-top: 46px;
+  }
+  
+  
+  
+  .account-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4caf50;
+    margin-right: 10px;
+  }
+  
+  .username {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: #fff;
+  }
+  
+  .status {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    color: #189215;
+
+  }
+  
+  .connected-time {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 34px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 11px 0 12px 0;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    border-radius: 14px;
+  }
+  
+  .progress-button {
+    background: rgba(15, 152, 229, 0.15);
+    color: #42bbff;
+    margin-bottom: 12px;
+  }
+  
+  .disconnect-button {
+    background: rgba(251, 78, 78, 0.15);
+    color: #ff4242;
+  }
+  
+  .back-button {
+    background: rgba(15, 152, 229, 0.15);
+    color: #42bbff;
+    position: absolute;
+    bottom: 37px;
+    left: 0;
+  }

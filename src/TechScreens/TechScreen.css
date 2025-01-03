@@ -1,0 +1,18 @@
+.tech-screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #0E0E0E;
+
+}
+
+.div-with-buttons{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 147px;
+    bottom: 34px;
+}
