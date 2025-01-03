@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useRef } from 'react'
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import "./ConnectScreen.css";
@@ -27,16 +27,17 @@ const Login = () => {
   const usernameNotExistForTest = "Twitch";
   const nameOfClasses={
     1:"",
-    2:"invalid-label-for-input",
-    3:"invalid-label-for-input",
-    4:"already-have-label-for-input"
+    2:"invalid-label-for-input2",
+    3:"invalid-label-for-input3",
+    4:"already-have-label-for-input4"
   };
-  const [NumbOfWarn, setNumbOfWarn] = useState(null);
+  const NumbOfWarn = useRef(0);
 
   const validateNickname = () => {
     return nickname.trim() !== '';
   };
   const checkNickname=()=>{
+    console.log(nickname);
     if(validateNickname()){
         if(nickname.trim()===usernameExistForTest/*сюда добавите функцию на проверку с бд об этом объекте*/){
             return 4;
@@ -49,27 +50,27 @@ const Login = () => {
   }
 
   const handleClick = () => {
-    setNumbOfWarn(checkNickname());
-    if (NumbOfWarn===1) {
+    NumbOfWarn.current = checkNickname();
+    if (NumbOfWarn.current===1) {
       setInputColor('#4a9ddb');
       setInputBack('rgba(86, 164, 255, 0.1)');
       navigate('/access');
       setIsValid(true);
       console.log('correct');
-    }else if(NumbOfWarn===2){
-      setInputBack('rgba(219, 74, 74, 0.1)');
+    }else if(NumbOfWarn.current===2){
+      setInputBack('rgba(219, 74, 74, 0.11)');
       setInputColor('#db4a4a');
       setIsValid(false);
       console.log('incorrect');
-    }else if(NumbOfWarn===3){
+    }else if(NumbOfWarn.current===3){
       setInputBack('rgba(219, 74, 74, 0.1)');
       setInputColor('#db4a4a');
-      setIsHaveThisUsername(true);
+      setIsValid(false);
       console.log("It's not your username!");
-    }else if(NumbOfWarn===4){
+    }else if(NumbOfWarn.current===4){
       setInputBack("rgba(190, 126, 254, 0.1)");
       setInputColor('#be7efe');
-      setIsHaveThisUsernameInYourAccount(true);
+      setIsValid(false);
       console.log("We have this username in your account");
     }
   };
@@ -95,7 +96,7 @@ const Login = () => {
                     style={{ borderColor: inputColor, backgroundColor: inputBack }}
                     className={`nickname-container-input ${isValid ? '' : 'invalid'}`}
                 />
-                <label htmlFor="nickname" className="nickname-container-span" style={{ display: isValid ? 'none' : 'block' }}>{t(`${nameOfClasses[NumbOfWarn]}${NumbOfWarn}`)}</label>
+                <label htmlFor="nickname" className={`nickname-container-span ${nameOfClasses[NumbOfWarn.current]}`} style={{ display: isValid ? 'none' : 'block' }}>{t(`${nameOfClasses[NumbOfWarn.current]}`)}</label>
             </div>
 
             <div className="switch-container">

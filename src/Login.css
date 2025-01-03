@@ -45,10 +45,18 @@
 .nickname-container-input.invalid::placeholder {
     color: rgba(219, 74, 74, 0.39); /* Цвет для невалидного состояния */
 }
-.nickname-container-input.have-your-account::placeholder{
+.nickname-container-input.already-have-label-for-input4::placeholder{
     color: #be7efe;
 }
-
+.already-have-label-for-input4{
+    color: #be7efe;
+}
+.invalid-label-for-input3{
+    color: #db4a4a;
+}
+.invalid-label-for-input2{
+    color: #db4a4a;
+}
 
 .switch-label {
     font-family: "Roboto", sans-serif;
